@@ -1,10 +1,14 @@
 import React from 'react'
+import { MouseEventHandler } from 'react';
 
-interface Props {
+type Props = {
   loading: boolean;
+  sendMessage: (event: React.SyntheticEvent) => void;
 }
 
-export default function FormButton({loading}:Props) {
+
+
+export default function ChatButton({ loading, sendMessage }: Props) {
   return (
     <>
       {loading ? (
@@ -33,21 +37,20 @@ export default function FormButton({loading}:Props) {
           Loading...
         </button>
       ) : (
-
-
-<div className="relative flex items-center justify-center group w-7">
- <button
-          type="submit"
-          className={`px-4 py-2 mt-4 text-white bg-green-600 rounded-md hover:bg-green-700 ${
-            loading ? "opacity-50 cursor-not-allowed" : ""
-          }`}
-          disabled={loading}
-        >
-          Search
-        </button>
+        <div className="relative flex items-center justify-center group w-7">
+          <button
+            onClick={(event) => sendMessage(event)}
+            className={`px-6 py-3 bg-green-500 text-white rounded-lg focus:outline-none hover:bg-green-600 ml-16 ${
+              loading ? "opacity-50 cursor-not-allowed" : ""
+            }`}
+            disabled={loading}
+          >
+            Send
+          </button>
           <span className="absolute font-mono text-sm text-green-500 transition-opacity opacity-0 pointer-events-none top-4 left-16 w-max group-hover:opacity-100">
-            Takes 6-7 secs due to<br/>
-            Google API restrictions
+            Can take 8-9 secs due to
+            <br />
+            while the ChatGPT is working
           </span>
         </div>
       )}

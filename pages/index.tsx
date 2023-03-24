@@ -1,23 +1,25 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Welcome from "../components/Welcome";
-import Form from "../components/Form";
 import Footer from "../components/Footer";
+import Chat from "../components/Chat";
+import Nav from "../components/Nav";
 
 const Home: NextPage = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-gray-800">
+    <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-blue-700">
       <Head>
-        <title>Radman Co. Business Searcher</title>
+        <title>Kobo Toolbox Support Bot</title>
         <link
           rel="icon"
-          href="https://raw.githubusercontent.com/dennis-nichols/biz-searcher-frontend/main/public/favicon.ico"
+
         />
       </Head>
+      <Nav />
       <main className="flex flex-col items-center justify-center flex-1 w-full px-20 text-center">
         <Welcome />
+        <Chat />
 
-        <Form backendBaseUrl={process.env.NEXT_PUBLIC_BACKEND!} />
       </main>
       <Footer />
     </div>
