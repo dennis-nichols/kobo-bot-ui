@@ -15,7 +15,7 @@ export default function ChatButton({ loading, sendMessage }: Props) {
         <button
           disabled
           type="button"
-          className="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-white font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-white inline-flex items-center mt-4"
+          className="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-white font-medium rounded-lg text-sm px-5 py-2.5 text-center ml-4 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-white inline-flex items-center mt-4"
         >
           <svg
             aria-hidden="true"
@@ -47,10 +47,10 @@ export default function ChatButton({ loading, sendMessage }: Props) {
           >
             Send
           </button>
-          <span className="absolute font-mono text-sm text-green-500 transition-opacity opacity-0 pointer-events-none top-4 left-16 w-max group-hover:opacity-100">
-            Can take 8-9 secs due to
+          <span className="absolute font-mono text-sm text-green-500 transition-opacity opacity-0 pointer-events-none  left-24 w-max group-hover:opacity-100 text-left">
+            Can take 8-9 secs
             <br />
-            while the ChatGPT is working
+            while ChatGPT is working
           </span>
         </div>
       )}
