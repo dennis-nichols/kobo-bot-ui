@@ -25,6 +25,7 @@ const Chat: React.FC = () => {
 
     setMessages([...messages, userMessage]);
     setLoading(true);
+    setInput("");
     const apiUrl = process.env.NEXT_PUBLIC_API_URL as string;
 
     try {
@@ -39,7 +40,7 @@ const Chat: React.FC = () => {
       console.error("Error:", error);
     }
 
-    setInput("");
+    
   };
 
   const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
@@ -75,7 +76,7 @@ const Chat: React.FC = () => {
       <div className="flex">
         <input
           type="text"
-          className="px-4 py-2 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 w-4/5"
+          className="px-4 py-2 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-emerald-300 w-4/5"
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyPress={handleKeyPress}

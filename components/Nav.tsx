@@ -3,7 +3,7 @@ import React from "react";
 
 const Nav: React.FC = () => {
   return (
-    <nav className="bg-green-500 p-4 fixed top-0 w-full">
+    <nav className="bg-emerald-400 p-4 fixed top-0 w-full">
       <div className="container mx-auto">
         <ul className="flex space-x-6">
           <li>

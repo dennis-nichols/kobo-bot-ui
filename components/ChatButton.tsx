@@ -15,7 +15,7 @@ export default function ChatButton({ loading, sendMessage }: Props) {
         <button
           disabled
           type="button"
-          className="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-white font-medium rounded-lg text-sm px-5 py-2.5 text-center ml-4 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-white inline-flex items-center mt-4"
+          className="text-white bg-emerald-600 hover:bg-green-800 focus:ring-4 focus:ring-white font-medium rounded-lg text-sm px-5 py-2.5 text-center ml-4 dark:bg-emerald-500 dark:hover:bg-green-700 dark:focus:ring-white inline-flex items-center mt-4"
         >
           <svg
             aria-hidden="true"
@@ -40,15 +40,15 @@ export default function ChatButton({ loading, sendMessage }: Props) {
         <div className="relative flex items-center justify-center group w-7">
           <button
             onClick={(event) => sendMessage(event)}
-            className={`px-6 py-3 bg-green-500 text-white rounded-lg focus:outline-none hover:bg-green-600 ml-16 ${
+            className={`px-6 py-3 bg-emerald-500 text-white rounded-lg focus:outline-none hover:bg-emerald-600 ml-16 ${
               loading ? "opacity-50 cursor-not-allowed" : ""
             }`}
             disabled={loading}
           >
             Send
           </button>
-          <span className="absolute font-mono text-sm text-green-500 transition-opacity opacity-0 pointer-events-none  left-24 w-max group-hover:opacity-100 text-left">
-            Can take 8-9 secs
+          <span className="absolute font-mono text-sm text-emerald-200 transition-opacity opacity-0 pointer-events-none  left-24 w-max group-hover:opacity-100 text-left">
+            Can take 8-9 seconds
             <br />
             while ChatGPT is working
           </span>
