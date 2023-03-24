@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="flex items-center justify-center w-full h-24 text-gray-500 border-t border-gray-700">
       <p className="flex items-center justify-center gap-2">
-        Built by Dennis Nichols, 2023
+        Dennis Nichols, 2023
       </p>
       <a
         target="_blank"
