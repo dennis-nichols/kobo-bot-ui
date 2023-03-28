@@ -1,6 +1,6 @@
-# Business Search Tool
+# Kobo Toolbox Support Bot (KoboBot)
 
-A tool to search and filter businesses in a specific area of the US, using the Google Place Search and Place Details APIs. This tool was built to help the client, [Radman Company](https://www.radmancompany.net/), with acquisition research adn deal sourcing for private equity firms.
+A ChatGPT-powered support bot for Kobo Toolbox - a "data collection, management, and visualization platform used globally for research and social good"
 
 ## Frontend
 
@@ -8,18 +8,17 @@ The UI is built with [Next.js](https://nextjs.org/), [Typescript](https://www.ty
 
 ## Backend
 
-The backend is built with [Python](https://www.python.org/) and the [FastAPI](https://fastapi.tiangolo.com/) framework. It is hosted on [Google Cloud Run](https://cloud.google.com/run). See the backend repo [here](https://github.com/dennis-nichols/radman_business_searcher).
+The backend is built with [Python](https://www.python.org/), the [FastAPI](https://fastapi.tiangolo.com/) framework, and the OpenAI API. It is hosted on [Google Cloud Run](https://cloud.google.com/run). See the backend repo [here](https://github.com/dennis-nichols/kobo-chat-api).
 
 ## Features
 
-- Search businesses in a specific area of the US
-- Filter businesses by the total number of reviews
-- Responsive and mobile friendly UI
-- Quick evaluation of candidate businesses for acquisition research
+- Chatbot is powered by the GPT-3.5-turbo model
+- Context for answers is drawn from data scraped from the Kobo Toolbox Support Pages
+- Advantage over ChatGPT is that ChatGPT's training data is only up to date as of September 2021 whereas the data for this app was scraped in March 2023
 
 ## Getting started
 
-1. Clone the repository: `git clone https://github.com/<your-username>/business-search-tool.git`
+1. Clone the repository: `git clone https://github.com/<your-username>/kobo-bot-ui.git`
 2. Navigate to the project directory: `cd business-search-tool`
 3. Install the dependencies: `npm install`
 4. Start the development server: `npm run dev`
